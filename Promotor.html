@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Promotor - Gameland Events</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="Promotor.css">
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <header class="top-left-logo">
+            <img src="Gameland Logo.png" alt="Gameland Events" class="mini-logo">
+        </header>
+
+        <main class="content-wrapper">
+            <form id="login-promotor" class="form-container">
+                <h2>LOGIN</h2>
+
+                <div class="input-field">
+                    <label for="user-promotor">USUARIO:</label>
+                    <input type="text" id="user-promotor" name="usuario" required minlength="4" placeholder="XXXXXXXX">
+                </div>
+
+                <div class="input-field">
+                    <label for="pass-promotor">CONTRASEÑA:</label>
+                    <input type="password" id="pass-promotor" name="password" required placeholder="XXXXXXXX">
+                </div>
+            </form>
+
+            <button type="submit" form="login-promotor" class="btn-entrar">ENTRAR</button>
+
+            <div class="footer-link">
+                <span>Aún no eres parte de la familia? </span>
+                <a href="registro.html">regístrate aquí</a>
+            </div>
+        </main>

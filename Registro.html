@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Proyecto Transversal</title>
+    <link rel="stylesheet" href="Registro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="top-left-logo">
+        <img src="Gameland Logo.png" alt="Gameland Events" class="mini-logo">
+    </header>
+    <main class="container-registro">
+        <form class="form-card" id="login-form">
+            <h2>REGISTRO</h2>
+
+            <div class="input-group">
+                <label for="email">EMAIL ADDRESS</label>
+                <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
+            </div>
+
+            <div class="input-group">
+                <label for="username">USERNAME</label>
+                <input type="text" id="username" name="username" required minlength="4" maxlength="15"
+                    pattern="^[a-zA-Z0-9]+$" title="Solo letras y números, sin espacios">
+            </div>
+
+            <div class="input-group">
+                <label for="password">PASSWORD</label>
+                <input type="password" id="password" name="password" required minlength="8"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="Debe contener al menos un número, una mayúscula y una minúscula">
+            </div>
+
+            <div class="input-group">
+                <label for="repeat-password">REPEAT PASSWORD</label>
+                <input type="password" id="repeat-password" name="repeat-password" required>
+            </div>
+
+            <div class="role-selection">
+                <input type="radio" id="promotor" name="role" value="Promotor" required>
+                <label for="promotor" class="btn-role-label">Promotor</label>
+
+                <input type="radio" id="cliente" name="role" value="Cliente" required>
+                <label for="cliente" class="btn-role-label">Cliente</label>
+            </div>
+
+            <button type="submit" class="btn-login">REGISTRARSE</button>
+        </form>
+    </main>
+</body>
+
+</html>

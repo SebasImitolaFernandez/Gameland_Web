@@ -1,0 +1,116 @@
+/* Fondo general con degradado azul oscuro */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #000000 0%, #004e92 100%);
+    font-family: 'Kode Mono', monospace;
+}
+
+.role-selection input[type="radio"] {
+    display: none;
+}
+
+.top-left-logo {
+    position: absolute; 
+    top: 20px;          
+    left: 20px;         
+    z-index: 100;       
+}
+
+.mini-logo {
+    width: 80px;       
+    height: auto;
+}
+
+/* Tarjeta del formulario con el efecto de tu imagen */
+.form-card {
+    background: linear-gradient(to bottom, #ffffff 70%, #a9a9a9 100%);
+    padding: 30px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    margin-top: 0;
+    font-weight: lighter;
+    letter-spacing: 2px;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #333;
+    background: transparent;
+    padding: 5px 0;
+    outline: none;
+}
+
+/* Feedback visual de validación solicitado en la tarea */
+input:focus:invalid {
+    border-bottom: 2px solid red;
+}
+
+input:valid {
+    border-bottom: 2px solid green;
+}
+
+/* Botones de selección de rol (Promotor/Cliente) */
+.role-selection {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.role-selection input[type="radio"] {
+    display: none;
+}
+
+.btn-role {
+    background-color: #ffb3b3;
+    /* Color rosado de tu imagen */
+    padding: 10px;
+    width: 45%;
+    cursor: pointer;
+    font-size: 12px;
+    display: inline-block;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.role-selection input[type="radio"]:checked+.btn-role-label {
+    background-color: #ff8080;
+    /* Un tono más oscuro de rosado */
+    border: 2px solid #00aaff;
+    /* Borde azul neón como el de tu logo */
+    font-weight: bold;
+}
+
+.btn-role-label:hover {
+    background-color: #ff9999;
+}
+
+/* Botón principal de envío */
+.btn-login {
+    background-color: #ffb3b3;
+    border: none;
+    padding: 10px 40px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+}

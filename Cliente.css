@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Kode Mono', monospace; /* Aplicación de la tipografía */
+}
+
+.main-wrapper {
+    min-height: 100vh;
+    width: 100%;
+    /* Restaurado el degradado verde original */
+    background: linear-gradient(to bottom, #000000 0%, #002b00 50%, #008000 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* Evita scrolls innecesarios */
+}
+
+.top-left-logo {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.mini-logo {
+    width: 150px;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 450px;
+    z-index: 2; /* Por encima del logo de fondo */
+}
+
+.form-container {
+    background-color: #dcdcdc; /* Gris original */
+    border: 2px solid #000;
+    padding: 50px 30px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-container h2 {
+    font-family: 'Kode Mono', monospace;
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+
+.input-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.input-field input {
+    font-family: 'Kode Mono', monospace;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000;
+    width: 60%;
+    padding: 5px;
+    outline: none;
+    text-align: center;
+}
+
+/* El botón neón con la fuente Kode Mono */
+.btn-entrar {
+    background-color: #1a1a1a;
+    color: #00ff00;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    font-size: 1.8rem;
+    font-family: 'Kode Mono', monospace;
+    cursor: pointer;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.footer-link {
+    background-color: #dcdcdc;
+    border: 2px solid #000;
+    padding: 8px 15px;
+    font-size: 0.85rem;
+}
+
+/* FIX DEFINITIVO PARA EL LOGO: No mueve nada */
+.logo-fondo-decorativo {
+    position: absolute;
+    bottom: -100px;
+    width: 500px;
+    opacity: 0.4;
+    z-index: 1;
+    pointer-events: none; /* Ignora clics del ratón */
+}

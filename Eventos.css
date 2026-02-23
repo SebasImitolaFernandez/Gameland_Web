@@ -1,0 +1,173 @@
+/* Configuración base */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: sans-serif;
+    background: linear-gradient(180deg, #000000 0%, #003870 100%);
+    color: white;
+    min-height: 100vh;
+}
+
+/* Header */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto 30px;
+}
+
+.logo {
+    width: 250px; /* Ajusta según el tamaño de tu imagen */
+}
+
+.search-box input {
+    background-color: #cccccc;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 15px;
+    width: 200px;
+}
+
+/* Contenedor principal */
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* Cuadro de imagen (Gris con X) */
+.image-placeholder > img {
+    background-color: #cccccc;
+    width: 200px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    border: 1px solid #666;
+}
+
+/* Lado derecho de la tarjeta */
+.details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-block {
+    background-color: #cccccc;
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    color: black;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Botón Anular */
+.btn-cancel {
+    background-color: #cccccc;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Paginación */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.dots-container {
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 5px 15px;
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #444;
+    border-radius: 50%;
+}
+
+.dot.active {
+    background-color: white;
+}
+
+/* Flechas básicas */
+.arrow {
+    width: 0; 
+    height: 0; 
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    cursor: pointer;
+}
+
+.left { border-right: 20px solid #001a33; }
+.right { border-left: 20px solid #001a33; }
+
+/* --- RESPONSIVE EVENTOS --- */
+
+@media (max-width: 480px) {
+    /* 1. Centramos el Header (Logo y Buscador) */
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .search-box input {
+        width: 250px; /* Un poco más ancho para que sea fácil de tocar */
+        text-align: center;
+    }
+
+    /* 2. Convertimos la Tarjeta de Horizontal a Vertical y la CENTRAMOS */
+    .card {
+        flex-direction: column; /* Imagen arriba, detalles abajo */
+        align-items: center;    /* Centra los elementos hijos */
+        gap: 10px;
+        width: 100%;
+        margin-bottom: 50px;    /* Más espacio entre tarjetas */
+    }
+
+    /* 3. Ajustamos el tamaño de la imagen para que no se corte */
+    .image-placeholder > img {
+        width: 90vw;            /* Casi todo el ancho de la pantalla */
+        height: auto;           /* Mantiene la proporción */
+        aspect-ratio: 16 / 9;
+        max-width: 350px;       /* Límite para que no se vea gigante */
+    }
+
+    /* 4. Ajustamos el bloque de texto y botón */
+    .details {
+        width: 90%;
+        align-items: center;    /* Asegura que el botón esté centrado */
+    }
+
+    .text-block {
+        height: auto;           /* Que se adapte al contenido */
+        min-height: 100px;
+        width: 100%;
+    }
+
+    .btn-cancel {
+        width: 80%;             /* Botón más grande y fácil de pulsar */
+        padding: 15px;
+    }
+}
