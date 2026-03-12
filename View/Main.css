@@ -43,6 +43,7 @@ body {
     justify-content: center;
 }
 
+
 .search-input {
     width: 100%;
     max-width: 450px;
@@ -209,16 +210,40 @@ body {
 
 /* 2. TABLET (Pantallas entre 481px y 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
-    .search-container {
-        width: 70%;
+    .games-grid {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 20px 0;
     }
 
+    .games-scroll {
+        display: flex;
+        flex-wrap: wrap;       /* Permite que los cuadros salten de línea */
+        justify-content: center; /* Centra los pares */
+        gap: 20px;             /* Espacio entre cuadros */
+        width: 95%;            /* Aprovecha el ancho de la pantalla */
+        max-width: 500px;      /* Limitamos el ancho total para forzar el par */
+    }
+
+    .game-box {
+        /* Calculamos el ancho para que quepan exactamente dos por fila */
+        /* (100% / 2) menos el espacio del gap */
+        width: calc(50% - 10px); 
+        height: 220px;         /* Altura ajustada para tablet */
+        flex-shrink: 0;
+        background-color: #dcdcdc;
+        border-radius: 15px;
+    }
+
+    /* Ajustes adicionales para que el resto se vea bien */
     .event-card {
-        width: 85%;
+        width: 90%;
     }
-
+    
     .goty-frame {
-        width: 300px;
+        width: 280px;
+        height: 160px;
     }
 }
 
