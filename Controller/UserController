@@ -1,6 +1,5 @@
     <?php
     session_start();
-
     class UserController{
         public function registro(){
             $mensaje = "";
@@ -20,7 +19,15 @@
                 }       
             }
         }
+         public function login() {
+
+
+
+    }
     }
     $controller = new UserController();
     $controller->registro();   
+
+
+   
 ?>

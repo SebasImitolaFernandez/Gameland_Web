@@ -98,8 +98,9 @@ body {
     gap: 40px;
 }
 
-.awards-statue {
-    height: 300px;
+.banner-content img{
+    height: 450px;
+    width: 500px;
 }
 
 .btn-featured {
