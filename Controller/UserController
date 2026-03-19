@@ -19,11 +19,11 @@
                 }       
             }
         }
-         public function login() {
+        public function login() {
 
 
 
-    }
+        }   
     }
     $controller = new UserController();
     $controller->registro();   
