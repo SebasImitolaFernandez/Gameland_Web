@@ -1,260 +1,242 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oxanium', sans-serif;
 }
 
 body {
-    background-color: black;
-    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom,
+            #000000 0%,
+            #000000 40%,
+            #013157 55%,
+            #0399ef 100%);
     color: white;
-}
-
-.main-wrapper {
     min-height: 100vh;
-    width: 100%;
-    /* Degradado de negro a azul según tu diseño */
-    background: linear-gradient(to bottom, #000000 75%, #001a33 100%);
     display: flex;
     flex-direction: column;
 }
 
-/* HEADER: Logo izquierda, Buscador centro */
-.top-bar {
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-header {
+    width: 100%;
+    padding: 10px 0;
+    position: relative;
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
-    width: 100%;
 }
 
-.logo-side,
-.spacer {
-    flex: 1;
-}
-
-.mini-logo {
-    width: 150px;
-}
-
-.search-container {
-    flex: 2;
+.logo {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    margin-right: auto;
+    margin-left: 0;
 }
 
+.logo img {
+    width: 120px; 
+    height: auto;
+    display: block;
+    margin-bottom: 5px;
+}
 
-.search-input {
-    width: 100%;
-    max-width: 450px;
-    padding: 12px;
+.logo-events {
+    font-size: 14px;
+    color: #00d4ff;
+    letter-spacing: 4px;
+}
+
+.search-bar input {
+    width: 350px;
+    padding: 10px 20px;
     border-radius: 25px;
     border: none;
-    background-color: #dcdcdc;
-    text-align: center;
-    font-weight: bold;
-    outline: none;
+    background-color: #d9d9d9;
+    font-size: 14px;
 }
 
-/* FEED-BACK VISUAL (Punto 3 de la tarea) */
-.search-input:focus {
-    box-shadow: 0 0 10px #00ff00;
-    /* Resplandor verde al seleccionar */
+.hero-slider {
+    position: relative;
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* MAIN CONTENT: Centrado de los cuadros */
-.main-content {
-    flex: 1;
+.slider-banner {
+    width: 100%;
+    height: 450px;
+    background: linear-gradient(135deg, #004d7a 0%, #008fb3 100%);
+    border-radius: 80px;
+    position: relative;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* Centra verticalmente */
     align-items: center;
-    /* Centra horizontalmente */
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
+}
+
+.banner-content {
+    display: flex;
+    align-items: center;
     gap: 40px;
 }
 
-.event-card {
-    background-color: #dcdcdc;
-    color: black;
-    width: 90%;
-    max-width: 700px;
-    border-radius: 30px;
-    padding: 25px;
-    text-align: center;
+.awards-statue {
+    height: 300px;
 }
 
-.carousel-wrapper {
+.btn-featured {
+    position: absolute;
+    bottom: 20px;
+    background-color: #d9d9d9;
+    color: #333;
+    padding: 8px 25px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    border: 2px solid #000;
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.platform-categories {
     display: flex;
+    justify-content: space-around;
+    padding: 40px 0;
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.category-item:hover {
+    transform: translateY(-10px);
+}
+
+.platform-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
     justify-content: center;
-    gap: 15px;
-    margin: 20px 0;
-}
-
-.goty-frame {
-    width: 350px;
-    /* Tamaño controlado de la imagen */
-    height: 200px;
-    background-color: #000;
-    border-radius: 15px;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 25px;
     overflow: hidden;
-    border: 1px dashed #666;
 }
 
-.goty-image {
+.platform-icon img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    /* Asegura que se vea todo el logo del GOTY */
 }
 
-/* LISTA DE JUEGOS INFERIOR CENTRADA */
-.games-grid {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+#xbox {
+    background-color: #107c10;
 }
 
-.games-scroll {
-    display: flex;
-    gap: 15px;
-    padding: 10px;
-    max-width: 90%;
+#psn {
+    background-color: #003087;
 }
 
-.game-box {
-    width: 120px;
-    height: 160px;
-    background-color: #dcdcdc;
-    border-radius: 15px;
-    flex-shrink: 0;
+#nintendo {
+    background-color: #e60012;
 }
 
-/* Estilos de botones y puntos */
-.nav-arrow {
-    background: #333;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
+#pc {
+    background-image: linear-gradient(45deg, white);
+}
+
+.btn-category {
+    background-color: #d9d9d9;
+    border: 2px solid #000;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 110px;
     cursor: pointer;
 }
 
-.btn-view-all {
-    display: inline-block;
-    background: #bbb;
-    padding: 6px 20px;
-    border-radius: 20px;
+.main-footer {
+    margin-top: auto;
+    padding: 30px 0;
+    text-align: right;
+}
+
+.social-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
-    color: black;
-    font-size: 0.8rem;
-    border: 1px solid black;
-    margin-bottom: 10px;
+    color: #000;
+    font-weight: bold;
 }
 
-/* --- CONFIGURACIÓN RESPONSIVA --- */
-
-/* 1. MÓVIL (Pantallas hasta 480px) */
-/* --- AL FINAL DE TU ARCHIVO Main.css --- */
-@media (max-width: 490px) {
-    .main-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* ESTO centra horizontalmente los hijos */
-        width: 100%;
-        padding: 10px 0;
-        /* Quita paddings laterales que puedan desviar el centro */
-    }
-
-    .event-card {
-        width: 90%;
-        /* Que no ocupe el 100% para que se vea centrado con aire a los lados */
-        max-width: none;
-        margin: 0 auto;
-        /* Margen automático a los lados para asegurar el centrado */
-    }
-
-    /* Forzamos que el contenedor se estire y se ponga en vertical */
-    .games-scroll {
-        display: flex !important;
-        flex-direction: column !important;
-        /* Cuadros uno debajo de otro */
-        align-items: center !important;
-        gap: 20px !important;
-        overflow-x: hidden !important;
-        /* Quitamos el scroll lateral */
-        width: 100% !important;
-    }
-
-    /* Hacemos que los cuadros tengan un tamaño fijo para que no se aplasten */
-    .game-box {
-        width: 250px !important;
-        height: 350px !important;
-        flex-shrink: 0 !important;
-    }
-
-    /* Ajustamos el resto para que no se amontone */
-    .top-bar {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .logo-side {
-        position: static !important;
-        margin-bottom: 10px;
-    }
+.instagram-icon {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: white;
 }
 
-/* 2. TABLET (Pantallas entre 481px y 768px) */
-@media (min-width: 481px) and (max-width: 768px) {
-    .games-grid {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        padding: 20px 0;
-    }
-
-    .games-scroll {
-        display: flex;
-        flex-wrap: wrap;       /* Permite que los cuadros salten de línea */
-        justify-content: center; /* Centra los pares */
-        gap: 20px;             /* Espacio entre cuadros */
-        width: 95%;            /* Aprovecha el ancho de la pantalla */
-        max-width: 500px;      /* Limitamos el ancho total para forzar el par */
-    }
-
-    .game-box {
-        /* Calculamos el ancho para que quepan exactamente dos por fila */
-        /* (100% / 2) menos el espacio del gap */
-        width: calc(50% - 10px); 
-        height: 220px;         /* Altura ajustada para tablet */
-        flex-shrink: 0;
-        background-color: #dcdcdc;
-        border-radius: 15px;
-    }
-
-    /* Ajustes adicionales para que el resto se vea bien */
-    .event-card {
-        width: 90%;
-    }
-    
-    .goty-frame {
-        width: 280px;
-        height: 160px;
-    }
+.facebook-icon {
+    background-color: #1877f2;
+    color: white;
 }
 
-/* 3. ESCRITORIO (Pantallas de más de 1024px) */
-@media (min-width: 1024px) {
-    .main-content {
-        gap: 60px;
-        /* Más espacio en pantallas grandes */
-    }
-
-    .event-card {
-        max-width: 900px;
-    }
+.x-icon {
+    background-color: #000;
+    color: white;
+    border: 1px solid #333;
 }

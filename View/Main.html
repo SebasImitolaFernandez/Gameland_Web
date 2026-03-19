@@ -4,63 +4,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gameland Events - Home</title>
+    <title>Gameland Events</title>
     <link rel="stylesheet" href="Main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@400;700&family=Oxanium:wght@400;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <div class="main-wrapper">
-        <header class="top-bar">
-            <div class="logo-side">
-                <img src="Gameland Logo.png" alt="Logo" class="mini-logo">
+
+    <header class="main-header">
+        <div class="header-container container">
+            <div class="logo">
+                <img src="Gameland Logo.png" alt="Gameland Events Logo">
+
             </div>
-            
-            <form class="search-container">
-                <input type="search" placeholder="BUSCADOR..." required class="search-input">
-            </form>
-            
-            <div class="spacer"></div> </header>
+            <div class="search-bar">
+                <input type="search" placeholder="BUSCADOR...">
+            </div>
+        </div>
+    </header>
 
-        <main class="main-content">
-            <section class="featured-section">
-                <div class="event-card">
-                    <h2 class="event-title">EVENTOS DESTACADOS</h2>
-                    
-                    <div class="carousel-wrapper">
-                        <button class="nav-arrow" type="button">&#9664;</button>
-                        
-                        <div class="goty-frame">
-                            <img src="goty.jpg" alt="The Game Awards GOTY" class="goty-image">
-                        </div>
-                        
-                        <button class="nav-arrow" type="button">&#9654;</button>
-                    </div>
+    <main class="main-content container">
 
-                    <div class="event-footer">
-                        <a href="#" class="btn-view-all">Ver Todos los eventos Destacados</a>
-                        <div class="dots-pagination">
-                            <span class="dot active"></span>
-                            <span class="dot"></span>
-                            <span class="dot"></span>
-                            <span class="dot"></span>
-                            <span class="dot"></span>
-                        </div>
+        <section class="hero-slider">
+            <div class="decorations-left">
+            </div>
+
+            <div class="slider-banner">
+                <div class="banner-content">
+                    <img src="URL_DE_LA_ESTATUA_AWARDS.png" alt="Game Awards Statue" class="awards-statue">
+                    <div class="awards-text-logo">
+                        <img src="URL_DEL_LOGO_GAME_AWARDS.svg" alt="The Game Awards Logo">
                     </div>
                 </div>
-            </section>
 
-            <section class="games-grid">
-                <div class="games-scroll">
-                    <div class="game-box"></div>
-                    <div class="game-box"></div>
-                    <div class="game-box"></div>
-                    <div class="game-box"></div>
-                    <div class="game-box"></div>
-                    <div class="game-box"></div>
+                <a href="#" class="btn-featured">Ver Todos los eventos Destacados</a>
+
+                <button class="slider-arrow prev">&#10094;</button> <button class="slider-arrow next">&#10095;</button>
+            </div>
+
+            <div class="decorations-right">
+            </div>
+        </section>
+
+        <section class="platform-categories">
+            <a href="#" class="category-item">
+                <div class="platform-icon" id="xbox">
+                    <img src="XboxLogo.png" alt="Xbox Logo">
                 </div>
-            </section>
-        </main>
-    </div>
+                <button class="btn-category">Xbox<br>GAMES</button>
+            </a>
+
+            <a href="#" class="category-item">
+                <div class="platform-icon" id="psn">
+                    <img src="PsnLogo.png" alt="PSN Logo">
+                </div>
+                <button class="btn-category">PSN<br>GAMES</button>
+            </a>
+
+            <a href="#" class="category-item">
+                <div class="platform-icon" id="nintendo">
+                    <img src="NintendoLogo.png" alt="Nintendo Logo">
+                </div>
+                <button class="btn-category">Nintendo<br>GAMES</button>
+            </a>
+
+            <a href="#" class="category-item">
+                <div class="platform-icon" id="pc">
+                    <img src="MicrosoftLogo.png" alt="PC Logo">
+                </div>
+                <button class="btn-category">PC<br>GAMES</button>
+            </a>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container container">
+            <div class="social-links">
+                <a href="#" class="social-icon x-icon">X</a> <a href="#" class="social-icon instagram-icon">Ins</a> <a
+                    href="#" class="social-icon facebook-icon">Fb</a>
+            </div>
+        </div>
+    </footer>
+
 </body>
 
 </html>
