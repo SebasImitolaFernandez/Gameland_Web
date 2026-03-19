@@ -1,18 +1,3 @@
 <?php
-$mensaje = "";
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email    = $_POST['email'];
-    $usuario  = $_POST['username'];
-    $pass     = $_POST['password'];
-    $pass2    = $_POST['repeat-password'];
-    $rol      = $_POST['role'];
 
-    if ($pass !== $pass2) {
-        $mensaje = "Error: Las contraseñas no coinciden.";
-    }else{
-
-        $mensaje = "Registro exitoso para el usuario: " . htmlspecialchars($usuario);
-        echo "Registro exitoso para el usuario: " . htmlspecialchars($usuario);
-    }       
-}
 ?>
