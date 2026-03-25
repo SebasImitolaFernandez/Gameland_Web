@@ -13,17 +13,17 @@
         }
         if (isset($_POST["register"])) {
             echo "<p>Login button is clicked.</p>";
-            $user->register();
+            $user->registro();
         }
     }
     class UserController{
-         $server
-         $usuario;
-         $pass;
-         $pass2;
-         $rol;
+         public $email;
+         public $usuario;
+         public $pass;
+         public $pass2;
+         public $rol;
         
-        public function __construct($email,$usuario,$pass,$pass2,$rol)
+        public function __construct($email = null ,$usuario = null ,$pass = null ,$pass2 = null ,$rol = null )
         {
             $this->email = $email;
             $this->usuario = $usuario;
@@ -37,32 +37,34 @@
 
 
         public function registro(){
+            $this->email = $_POST['email'];
+            $this->usuario = $_POST['username'];
+            $this->pass = $_POST['password'];
+            $this->pass2 = $_POST['repeat-password'];
+            $this->rol = $_POST['role'];
+
             $mensaje = "";
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $email    = $_POST['email'];
-            $usuario  = $_POST['username'];
-            $pass     = $_POST['password'];
-            $pass2    = $_POST['repeat-password'];
-            $rol      = $_POST['role'];
 
-            if ($pass !== $pass2) {
+            if ($this->pass !== $this->pass2) {
                 $mensaje = "Error: Las contraseñas no coinciden.";
+                echo $mensaje;
             }else{
+                $mensaje = "Registro exitoso para el usuario: " . htmlspecialchars($this->usuario);
+                echo $mensaje;
 
-                $mensaje = "Registro exitoso para el usuario: " . htmlspecialchars($usuario);
-                echo "Registro exitoso para el usuario: " . htmlspecialchars($usuario);
-                }       
+                echo "<br>Usuario creado: " . $this->usuario;
             }
         }   
         public function login() {
-
-
-
-        }   
+            $this->usuario = $_POST['usuario'];
+            $this->pass = $_POST['password'];
+            echo "Intentando entrar como: " . htmlspecialchars($this->usuario);
+        }  
+        
+        public function logout(){
+            session_destroy();
+            echo "Sesión cerrada.";
+        }
     }
-    $controller = new UserController();
-    $controller->registro();   
 
-
-   
 ?>

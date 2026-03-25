@@ -1,0 +1,55 @@
+    <?php
+    session_start();
+    if ($_SERVER["REQUEST_METHOD"] == "Ps") {
+        # code...
+    }
+    class UserController{
+        public $email;
+        public $usuario;
+        public $pass;
+        public $pass2;
+        public $rol;
+        
+        public function __construct($email,$usuario,$pass,$pass2,$rol)
+        {
+            $this->email = $email;
+            $this->usuario = $usuario;
+            $this->pass = $pass;
+            $this->pass2 = $pass2;
+            $this->rol = $rol;
+            echo "Usuario creado: " . $this->usuario . "<br>";
+            echo "Contraseña creada exitosamente!: " . $this->pass . "<br>";
+
+        }
+
+
+        public function registro(){
+            $mensaje = "";
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $email    = $_POST['email'];
+            $usuario  = $_POST['username'];
+            $pass     = $_POST['password'];
+            $pass2    = $_POST['repeat-password'];
+            $rol      = $_POST['role'];
+
+            if ($pass !== $pass2) {
+                $mensaje = "Error: Las contraseñas no coinciden.";
+            }else{
+
+                $mensaje = "Registro exitoso para el usuario: " . htmlspecialchars($usuario);
+                echo "Registro exitoso para el usuario: " . htmlspecialchars($usuario);
+                }       
+            }
+        }   
+        public function login() {
+
+
+
+        }   
+    }
+    $controller = new UserController();
+    $controller->registro();   
+
+
+   
+?>
