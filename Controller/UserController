@@ -1,6 +1,41 @@
     <?php
     session_start();
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $user = new UserController();
+
+        if (isset($_POST["login"])) {
+            echo "<p>Login button is clicked.</p>";
+            $user->login();
+        }
+        if (isset($_POST["logout"])) {
+            echo "<p>Login button is clicked.</p>";
+            $user->logout();
+        }
+        if (isset($_POST["register"])) {
+            echo "<p>Login button is clicked.</p>";
+            $user->register();
+        }
+    }
     class UserController{
+         $server
+         $usuario;
+         $pass;
+         $pass2;
+         $rol;
+        
+        public function __construct($email,$usuario,$pass,$pass2,$rol)
+        {
+            $this->email = $email;
+            $this->usuario = $usuario;
+            $this->pass = $pass;
+            $this->pass2 = $pass2;
+            $this->rol = $rol;
+            echo "Usuario creado: " . $this->usuario . "<br>";
+            echo "Contraseña creada exitosamente!: " . $this->pass . "<br>";
+
+        }
+
+
         public function registro(){
             $mensaje = "";
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -18,7 +53,7 @@
                 echo "Registro exitoso para el usuario: " . htmlspecialchars($usuario);
                 }       
             }
-        }
+        }   
         public function login() {
 
 

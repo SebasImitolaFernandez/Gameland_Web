@@ -16,9 +16,11 @@
         </header>
 
         <main class="content-wrapper">
-            <form class="form-container" id="login-form">
+            <form class="form-container" id="login-form" action="../Controller/UserController" method="post">
                 <h2>LOGIN</h2>
 
+                <input type="hidden" name="action" value="login">
+                 
                 <div class="input-field">
                     <label for="usuario">USUARIO:</label>
                     <input type="text" id="usuario" name="usuario" required placeholder="XXXXXXXX">
