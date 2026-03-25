@@ -32,6 +32,7 @@
             $this->rol = $rol;
             echo "Usuario creado: " . $this->usuario . "<br>";
             echo "Contraseña creada exitosamente!: " . $this->pass . "<br>";
+            echo"NIGGA";
 
         }
 
@@ -42,7 +43,7 @@
             $this->pass = $_POST['password'];
             $this->pass2 = $_POST['repeat-password'];
             $this->rol = $_POST['role'];
-    
+
             $mensaje = "";
 
             if ($this->pass !== $this->pass2) {
