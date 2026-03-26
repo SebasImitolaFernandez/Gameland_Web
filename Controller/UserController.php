@@ -22,18 +22,12 @@
          public $pass;
          public $pass2;
          public $rol;
+         public $conn;
         
-        public function __construct($email = null ,$usuario = null ,$pass = null ,$pass2 = null ,$rol = null )
+        public function __construct( )
         {
-            $this->email = $email;
-            $this->usuario = $usuario;
-            $this->pass = $pass;
-            $this->pass2 = $pass2;
-            $this->rol = $rol;
-            echo "Usuario creado: " . $this->usuario . "<br>";
-            echo "Contraseña creada exitosamente!: " . $this->pass . "<br>";
-            echo"NIGGA";
-
+          this->conn
+          
         }
 
 

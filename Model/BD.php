@@ -20,6 +20,12 @@ if($conexion-> connect_error) {
 
     $conexion -> close();
 
+
+    $sql = "INSERT INTO usuario (nombre, email, edad) VALUE (?, ?, ?)";
+    $stmt = $conexion->prepare($sql);
+
+    
+
 ?>
 
 
