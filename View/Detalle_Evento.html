@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Evento - Gameland Events</title>
+    <link rel="stylesheet" href="Main.css">
+    <link rel="stylesheet" href="Eventos.css">
+</head>
+<body>
+    <header class="navbar">
+        <img src="Imagenes/Gameland Logo.png" alt="Gameland Events Logo" class="logo">
+    </header>
+
+    <main class="content">
+        <article class="card" style="flex-direction: column; padding: 30px; background: white; color: black; border-radius: 15px;">
+            <h1>The Game Awards 2025</h1>
+            <p><strong>Fecha:</strong> 12 de Diciembre, 2025</p>
+            <p>La gala más importante del año donde se premia la excelencia en la industria del videojuego.</p>
+
+            <section aria-label="Video del evento" style="margin-top: 20px;">
+                <h2>Tráiler Oficial</h2>
+                <video controls width="100%" style="border-radius: 10px; border: 2px solid #000;">
+                    <source src="video.mp4" type="video/mp4">
+                    <track src="subtitulos_es.vtt" kind="subtitles" srclang="es" label="Español" default>
+                    Su navegador no soporta video.
+                </video>
+            </section>
+
+            <section aria-label="Audio del evento" style="margin-top: 20px;">
+                <h2>Resumen en Audio</h2>
+                <audio controls>
+                    <source src="audio.mp3" type="audio/mpeg">
+                </audio>
+                <div style="background: #f0f0f0; padding: 15px; margin-top: 10px; border-left: 5px solid #0399ef;">
+                    <strong>Transcripción de Accesibilidad (AAA):</strong>
+                    <p>Bienvenido al resumen de los Game Awards. En esta edición, los nominados a juego del año incluyen títulos destacados de acción, aventura y RPG...</p>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer style="text-align: center; margin-top: 20px;">
+        <a href="Main.html" style="color: white;">Volver al inicio</a>
+    </footer>
+</body>
+</html>

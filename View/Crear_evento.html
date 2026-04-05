@@ -16,38 +16,39 @@
     </header>
 
     <main class="form-container">
-        <div class="card-form">
-            <h1>CREAR EVENTO</h1>
+    <div class="card-form">
+        <h1>CREAR EVENTO</h1>
 
-            <form>
-                <div class="form-group">
-                    <label>NOMBRE</label>
-                    <input type="text" class="input-short">
-                </div>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="nombre-evento">NOMBRE</label>
+                <input type="text" id="nombre-evento" name="nombre" class="input-short" required aria-required="true">
+            </div>
 
-                <div class="form-group">
-                    <label>DESCRIPCION</label>
-                    <textarea rows="4"></textarea>
-                </div>
+            <div class="form-group">
+                <label for="descripcion-evento">DESCRIPCION</label>
+                <textarea id="descripcion-evento" name="descripcion" rows="4" required></textarea>
+            </div>
 
-                <div class="form-group">
-                    <label>IMAGENES</label>
-                    <div class="image-upload-placeholder"></div>
-                </div>
+            <div class="form-group">
+                <label for="subir-imagen">IMAGENES</label>
+                <input type="file" id="subir-imagen" name="imagenes" class="image-upload-placeholder" aria-label="Subir imágenes del evento">
+            </div>
 
-                <div class="form-group">
-                    <label>PRECIO ENTRADAS</label>
-                    <input type="text" class="input-medium">
-                </div>
+            <div class="form-group">
+                <label for="precio-evento">PRECIO ENTRADAS</label>
+                <input type="text" id="precio-evento" name="precio" class="input-medium" aria-describedby="ayuda-precio">
+                <p id="ayuda-precio" style="font-size: 0.8rem; color: #555;">Formato: 00.00€</p>
+            </div>
 
-                <div class="button-group">
-                    <button type="button" class="btn btn-edit">EDITAR</button>
-                    <button type="submit" class="btn btn-save">GUARDAR</button>
-                    <button type="button" class="btn btn-delete">ELIMINAR</button>
-                </div>
-            </form>
-        </div>
-    </main>
+            <div class="button-group">
+                <button type="button" class="btn btn-edit">EDITAR</button>
+                <button type="submit" class="btn btn-save">GUARDAR</button>
+                <button type="button" class="btn btn-delete">ELIMINAR</button>
+            </div>
+        </form>
+    </div>
+</main>
 
 </body>
 </html>
