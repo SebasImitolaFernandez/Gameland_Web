@@ -1,11 +1,10 @@
-/* Fondo general con degradado azul oscuro */
 body {
     margin: 0;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom, #000000 0%, #004e92 100%);
+    background: linear-gradient(to bottom, #000000 25%, #004e92 75%);
     font-family: 'Kode Mono', monospace;
 }
 
@@ -21,15 +20,16 @@ body {
 }
 
 .mini-logo {
-    width: 80px;       
+    width: 250px;       
     height: auto;
 }
 
-/* Tarjeta del formulario con el efecto de tu imagen */
 .form-card {
     background: linear-gradient(to bottom, #ffffff 70%, #a9a9a9 100%);
+    border-radius: 15%;
     padding: 30px;
-    width: 320px;
+    width: 400px;
+    height: 400px;
     text-align: center;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
@@ -60,7 +60,6 @@ h2 {
     outline: none;
 }
 
-/* Feedback visual de validación solicitado en la tarea */
 input:focus:invalid {
     border-bottom: 2px solid red;
 }
@@ -69,7 +68,6 @@ input:valid {
     border-bottom: 2px solid green;
 }
 
-/* Botones de selección de rol (Promotor/Cliente) */
 .role-selection {
     display: flex;
     justify-content: space-between;
@@ -82,7 +80,6 @@ input:valid {
 
 .btn-role {
     background-color: #ffb3b3;
-    /* Color rosado de tu imagen */
     padding: 10px;
     width: 45%;
     cursor: pointer;
@@ -95,9 +92,7 @@ input:valid {
 
 .role-selection input[type="radio"]:checked+.btn-role-label {
     background-color: #ff8080;
-    /* Un tono más oscuro de rosado */
     border: 2px solid #00aaff;
-    /* Borde azul neón como el de tu logo */
     font-weight: bold;
 }
 
@@ -105,7 +100,6 @@ input:valid {
     background-color: #ff9999;
 }
 
-/* Botón principal de envío */
 .btn-login {
     background-color: #ffb3b3;
     border: none;

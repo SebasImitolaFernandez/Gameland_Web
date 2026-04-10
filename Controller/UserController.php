@@ -4,15 +4,15 @@
         $user = new UserController();
 
         if (isset($_POST["login"])) {
-            echo "<p>Login button is clicked.</p>";
+            //echo "<p>Login button is clicked.</p>";
             $user->login();
         }
         if (isset($_POST["logout"])) {
-            echo "<p>Login button is clicked.</p>";
+            //echo "<p>Login button is clicked.</p>";
             $user->logout();
         }
         if (isset($_POST["register"])) {
-            echo "<p>Login button is clicked.</p>";
+            //echo "<p>Login button is clicked.</p>";
             $user->registro();
         }
     }
@@ -42,16 +42,35 @@
                 $mensaje = "Error: Las contraseñas no coinciden.";
                 echo $mensaje;
             }else{
-                $mensaje = "Registro exitoso para el usuario: " . htmlspecialchars($this->usuario);
-                echo $mensaje;
+               // $mensaje = "Registro exitoso para el usuario: " . htmlspecialchars($this->usuario);
+               // echo $mensaje;
+                //echo "<br>Usuario creado: " . $this->usuario;
+                if ($this->rol === "Cliente") {
+                header("Location: ../View/Cliente.html");
+                exit();
+                }
+                else if ($this->rol === "Promotor") {
+                header("Location: ../View/Promotor.html");
+                exit();
 
-                echo "<br>Usuario creado: " . $this->usuario;
+                }
+                else{
+                    echo "Error: En cargar la pagina";
+                }
             }
         }   
         public function login() {
             $this->usuario = $_POST['usuario'];
             $this->pass = $_POST['password'];
-            echo "Intentando entrar como: " . htmlspecialchars($this->usuario);
+            $this->rol = $_POST['role'];
+            //echo "Intentando entrar como: " . htmlspecialchars($this->usuario);
+            if ($this->rol === "Cliente") {
+                header("Location: ../View/Main_Cliente.html");
+            }else if ($this->rol === "Promotor") {
+                header("Location: ../View/Main_Promotor.html");
+            }else{
+                echo "Usuario no existe";
+            }
         }  
         
         public function logout(){

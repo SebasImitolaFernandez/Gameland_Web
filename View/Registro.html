@@ -17,11 +17,11 @@
     </header>
     <main class="container-registro">
         <form class="form-card" id="login-form" action="../Controller/UserController.php" method="post">
-            <h2>REGISTRO</h2>
+            <h2 style="font-weight: bold;">REGISTRO</h2>
 
             <div class="input-group">
                 <label for="email">EMAIL ADDRESS</label>
-                <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
+                <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com" >
             </div>
 
             <div class="input-group">
@@ -49,7 +49,6 @@
                 <input type="radio" id="cliente" name="role" value="Cliente" required>
                 <label for="cliente" class="btn-role-label">Cliente</label>
             </div>
-
             <button type="submit" name="register" class="btn-login">REGISTRARSE</button>
         </form>
     </main>
